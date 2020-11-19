@@ -74,6 +74,10 @@ try {
         <td><?php echo escape($row["location"]); ?></td>
         <td><?php echo escape($row["date"]); ?> </td>
         <td><button type="submit" name="submit" value="<?php echo escape($row["id"]); ?>">Delete</button></td>
+        <style>
+        color: red;
+        font-family:cursie
+        </style>
       </tr>
     <?php endforeach; ?>
     </tbody>

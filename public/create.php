@@ -15,12 +15,14 @@ if (isset($_POST['submit'])) {
   try  {
     $connection = new PDO($dsn, $username, $password, $options);
     
+    $password = md5($password);
     $new_user = array(
       "firstname" => $_POST['firstname'],
       "lastname"  => $_POST['lastname'],
       "email"     => $_POST['email'],
       "age"       => $_POST['age'],
-      "location"  => $_POST['location']
+      "location"  => $_POST['location'],
+      "password"  => $_POST['password'],
     );
 
     $sql = sprintf(
@@ -57,6 +59,8 @@ if (isset($_POST['submit'])) {
     <input type="text" name="age" id="age">
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
     <input type="submit" name="submit" value="Submit">
   </form>
 

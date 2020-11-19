@@ -1,6 +1,6 @@
-CREATE DATABASE test;
+CREATE DATABASE users;
 
-use test;
+use users;
 
 CREATE TABLE users (
 	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
@@ -8,6 +8,7 @@ CREATE TABLE users (
 	lastname VARCHAR(30) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	age INT(3),
+	password VARCHAR(255) NOT NULL,
 	location VARCHAR(50),
 	date TIMESTAMP
 );

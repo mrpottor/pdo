@@ -1,9 +1,36 @@
-label {
-	display: block;
-	margin: 5px 0;
+li{
+	background:rgb(86, 190, 168);
+	position: center;
+	font-family: cursive;
+	display: <display-box>;
+	margin: 10px 0;
 }
+label {
+	background: rgb(86, 190, 168);
+    position: center;
+    font-family: cursive;
+	display: block;
+	margin: 10px 0;
+}
+head {
+	background: rgb(86, 190, 168);
+    position: center;
+    font-family: cursive;
+	display: block;
 
-table {
+}
+body {
+	background: rgb(86, 190, 168);
+    position: center;
+    font-family: cursive;
+	display: block;
+
+}
+table {background:rgb(86, 190, 168);
+    position: relative;
+    font-family: cursive;
+	display: block;
+	margin: 10px 0;
 	border-collapse: collapse;
 	border-spacing: 0;
 }
@@ -11,5 +38,5 @@ table {
 td,
 th {
 	padding: 5px;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid rgb(86, 190, 168);;
 }
