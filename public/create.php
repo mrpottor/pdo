@@ -15,14 +15,14 @@ if (isset($_POST['submit'])) {
   try  {
     $connection = new PDO($dsn, $username, $password, $options);
     
-    $password = md5($password);
+    $Password = hash('sha256',$password);
     $new_user = array(
       "firstname" => $_POST['firstname'],
       "lastname"  => $_POST['lastname'],
       "email"     => $_POST['email'],
       "age"       => $_POST['age'],
       "location"  => $_POST['location'],
-      "password"  => $_POST['password'],
+      "password"  => $Password,
     );
 
     $sql = sprintf(
