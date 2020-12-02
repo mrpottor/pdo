@@ -17,11 +17,11 @@ if (isset($_POST['submit'])) {
 
     $sql = "SELECT * 
             FROM users
-            WHERE location = :location";
+            WHERE password = :password";
 
-    $location = $_POST['location'];
+    $Password = hash('sha256',$_POST['password']);
     $statement = $connection->prepare($sql);
-    $statement->bindParam(':location', $location, PDO::PARAM_STR);
+    $statement->bindParam(':password', $Password, PDO::PARAM_STR);
     $statement->execute();
 
     $result = $statement->fetchAll();
@@ -64,16 +64,16 @@ if (isset($_POST['submit'])) {
       </tbody>
     </table>
     <?php } else { ?>
-      <blockquote>No results found for <?php echo escape($_POST['location']); ?>.</blockquote>
+      <blockquote>No results found for <?php echo escape('ths password'); ?>.</blockquote>
     <?php } 
 } ?> 
 
-<h2>Find user based on location</h2>
+<h2>Find user based on Password</h2>
 
 <form method="post">
   <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
-  <label for="location">Location</label>
-  <input type="text" id="location" name="location">
+  <label for="password">password</label>
+  <input type="password" id="password" name="password">
   <input type="submit" name="submit" value="View Results">
 </form>
 

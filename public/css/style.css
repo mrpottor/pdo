@@ -1,33 +1,33 @@
 li{
 	background:rgb(86, 190, 168);
-	position: center;
+	place-items: center;
 	font-family: cursive;
-	display: <display-box>;
+	display: block;
 	margin: 10px 0;
 }
 label {
 	background: rgb(86, 190, 168);
-    position: center;
+    place-items: center;
     font-family: cursive;
 	display: block;
 	margin: 10px 0;
 }
 head {
 	background: rgb(86, 190, 168);
-    position: center;
+    place-items: center;
     font-family: cursive;
-	display: block;
+	display: grid;
 
 }
 body {
 	background: rgb(86, 190, 168);
-    position: center;
+    place-items: center;
     font-family: cursive;
-	display: block;
+	display: grid;
 
 }
 table {background:rgb(86, 190, 168);
-    position: relative;
+    place-items: relative;
     font-family: cursive;
 	display: block;
 	margin: 10px 0;
